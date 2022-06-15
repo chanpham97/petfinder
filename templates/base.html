@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>{% block title %} breakfast time {% endblock %}</title>
+        <link rel="stylesheet" href="../static/css/style.css?q={{time}}">
+      
+    </head>
+    <body>
+      <div>nav: <a href="/index">home</a></div>
+      <hr>
+      {% block content %}{% endblock %}
+      <hr>
+      <div>made by chan pham</div>
+    </body>
+</html>

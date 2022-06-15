@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}results{% endblock %}
+
+{% block content %}
+  <h1>brekkie</h1>
+  <p>you had {{ breakfast }}, {{ name.upper() }}</p>
+<!--         <p>it sounds {{ rating }}</p> -->
+  <p>it sounds {{ "yum" if breakfast == "waffles" else "ok"}}</p>
+{% endblock %}

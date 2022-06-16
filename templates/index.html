@@ -1,12 +1,24 @@
 {% extends "base.html" %}
-{% block title %}home page{% endblock %}
+{% block title %}find your nyc pet{% endblock %}
 
 {% block content %}
-  <h1>hi {{ props.name }}!</h1>
-  <form method="post" action="/results">
-    <input type="text" name="nickname" placeholder="Enter your nickname"/>
-    <input type="text" name="breakfast" placeholder="Enter your breakfast"/>
-    <input type="submit" value="Submit"/>
-  </form>
-  <img src={{ url_for("static", filename="images/micropig.jpg") }}/>
+<div class="container">
+  <div class="row">
+    <h1>are you looking for a pet?</h1>
+  </div>
+  <div class="row">
+    <h2>we can help you figure out which breed you should get!</h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <a class="btn btn-primary" href="/dog" role="button">dog quiz</a>
+    </div>
+    <div class="col-6">
+      <a class="btn btn-primary" href="/cat" role="button">cat quiz</a>
+    </div>
+  </div>
+</div>
 {% endblock %}

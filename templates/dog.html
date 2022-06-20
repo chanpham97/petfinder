@@ -7,41 +7,36 @@
   <p>based on <a href="https://www.akc.org/dog-breed-selector/">american kennel club</a></p>
 </div>
 <div class="container">
-  <p>how much experience do you have owning a dog?</p>
-  <select class="form-select" aria-label="form-select" id="experience">
-    <option value="1">none</option>
-    <option value="2">some</option>
-    <option value="3">a lot</option>
-  </select>
-  <p>how much baking are you okay with?</p>
-  <select class="form-select" aria-label="form-select">
-    <option value="1">none</option>
-    <option value="2">some</option>
-    <option value="3">a lot</option>
-  </select>
-  <p>how much shedding are you okay with?</p>
-  <select class="form-select" aria-label="form-select">
-    <option value="1">little</option>
-    <option value="2">a lot</option>
-  </select>
-  <p>how active would you like your dog to be?</p>
-  <select class="form-select" aria-label="form-select">
-    <option value="1">not very</option>
-    <option value="2">average</option>
-    <option value="3">quite active</option>
-  </select>
-  <p>what size dog would you like?</p>
-  <select class="form-select" aria-label="form-select">
-    <option value="1">small</option>
-    <option value="2">medium</option>
-    <option value="3">large</option>
-  </select>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col">
+<form method="post" action="/dog_results">
+    <label for="experience" class="form-label">how much experience with dogs do you have?</label>
+    <select class="form-select" aria-label="form-select" name="experience">
+      <option value=0>little</option>
+      <option value=1>quite a bit</option>
+    </select>
+    <label for="bark" class="form-label">how much barking are you okay with?</label>
+    <select class="form-select" aria-label="form-select" name="bark">
+      <option value=0>none</option>
+      <option value=1>some</option>
+      <option value=2>a lot</option>
+    </select>
+    <label for="shed" class="form-label">how much shedding are you okay with?</label>
+    <select class="form-select" aria-label="form-select" name="shed">
+      <option value=0>little</option>
+      <option value=1>a lot</option>
+    </select>
+<!--     <label for="activity" class="form-label">how active would you like your dog to be?</label>
+    <select class="form-select" aria-label="form-select" name="activity">
+      <option value=0>not very</option>
+      <option value=1>average</option>
+      <option value=2>quite active</option>
+    </select> -->
+<!--     <label for="size" class="form-label">what size dog would you like?</label>
+    <select class="form-select" aria-label="form-select" name="size">
+      <option value="small">small</option>
+      <option value="medium">medium</option>
+      <option value="large">large</option>
+    </select> -->
     <button type="submit" class="btn btn-primary">find your dog!</button>
-  </div>
-</form>
+  </form>
 </div>
 {% endblock %}

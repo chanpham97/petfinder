@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}dog results{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>you should get a {{ props.breeds[0] }}!</h1>
+    <h3>factors considered:</h3>
+    <ul>
+      <li>your live in a nyc apartment</li>
+      <li>your experience level is {{ props.experience }}</li>
+      <li>your barking tolerance is {{ props.bark }}</li>
+      <li>your shedding tolerance is {{ props.shed }}</li>
+    </ul>
+    <a class="btn btn-primary" href="/" role="button">try again</a>
+  </div>
+{% endblock %}
